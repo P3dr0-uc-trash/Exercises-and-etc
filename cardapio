@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <body style="background-color: yellowgreen;"></body>
+    <title>PH lanches</title>
+    <header style="text-align: center; font-size: 100px;font-family:Comic Sans MS;">Lanchonete PH lanches</header>
+<div style="border: 12px;border-style: groove;">
+    <h1 style="text-align: center; font-family: 'Times New Roman', Times, serif;">Cardápio</h1>
+
+    <p style="font-size: 30px;"><img src="C:\Users\pedrohenrique.dantas\Documents\ativphdl\risoto.jfif" alt="risoto" style="float: left;height: 300px;width: 340px;margin-left: 20px;margin-right: 15px;">
+     
+       *  Combo preto com Preto e Ouro  *<br>
+       <dl style="font-size: 20px;">
+        <dt style="font-size: 25px;">*  Prato principal  *</dt>
+        <dd>-  Risoto de cogumelos com trufas negras"</dd>
+        <dt style="font-size: 25px;">*  Entrada  * </dt>
+        <dd>-  Carpaccio de carne com molho de mostarda e alcaparras </dd>
+        <dt style="font-size: 25px;">*  Sobremesa  *</dt>
+        <dd>-  Mousse de chocolate amargo com redução de vinho do Porto</dd>
+        <dt style="font-size: 25px;">*  Valor  *</dt>
+        <dd>-  R$120,00</dd>
+       </dl>
+    </p>
+
+    <p style="font-size: 30px;"><img src="C:\Users\pedrohenrique.dantas\Documents\ativphdl\risoto.jfif" alt="risoto" style="float: left;height: 300px;width: 340px;margin-left: 20px;margin-right: 15px;">
+     
+        *  Combo preto com Preto e Ouro  *<br>
+        <dl style="font-size: 20px;">
+         <dt style="font-size: 25px;">*  Prato principal  *</dt>
+         <dd>-  Risoto de cogumelos com trufas negras"</dd>
+         <dt style="font-size: 25px;">*  Entrada  * </dt>
+         <dd>-  Carpaccio de carne com molho de mostarda e alcaparras </dd>
+         <dt style="font-size: 25px;">*  Sobremesa  *</dt>
+         <dd>-  Mousse de chocolate amargo com redução de vinho do Porto</dd>
+         <dt style="font-size: 25px;">*  Valor  *</dt>
+         <dd>-  R$120,00</dd>
+        </dl>
+     </p>
+
+</div>
+
+
+
+
+</html>
