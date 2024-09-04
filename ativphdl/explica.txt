@@ -1,0 +1,99 @@
+Claro! Vamos revisar o algoritmo Selection Sort com uma explicação clara e um exemplo de código em C.
+
+### O que é Selection Sort?
+
+O Selection Sort é um algoritmo de ordenação simples. Ele funciona da seguinte maneira:
+
+1. **Encontre o menor elemento**: Procure o menor elemento no array que ainda não está ordenado.
+2. **Troque com o primeiro elemento não ordenado**: Troque esse menor elemento encontrado com o primeiro elemento da parte não ordenada do array.
+3. **Repita o processo**: Avance para o próximo elemento e repita o processo até que o array esteja totalmente ordenado.
+
+### Como o Selection Sort Funciona
+
+Vamos ver como o Selection Sort ordena um array passo a passo:
+
+1. **Primeira Iteração**:
+   - Encontre o menor elemento no array inteiro.
+   - Troque esse menor elemento com o primeiro elemento do array.
+   
+2. **Segunda Iteração**:
+   - Encontre o menor elemento no restante do array (excluindo o primeiro elemento que já está na posição correta).
+   - Troque esse menor elemento com o segundo elemento do array.
+
+3. **Continue**:
+   - Repita o processo para a parte não ordenada do array até que todo o array esteja ordenado.
+
+### Exemplo de Código em C
+
+Aqui está um exemplo de como implementar o Selection Sort em C:
+
+```c
+#include <stdio.h>
+
+// Função para trocar dois elementos
+void trocar(int *a, int *b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+// Função de ordenação Selection Sort
+void selectionSort(int array[], int tamanho) {
+    int i, j, minIdx;
+
+    // Passa por todos os elementos do array
+    for (i = 0; i < tamanho - 1; i++) {
+        // Encontra o índice do menor elemento na parte não ordenada
+        minIdx = i;
+        for (j = i + 1; j < tamanho; j++) {
+            if (array[j] < array[minIdx]) {
+                minIdx = j;
+            }
+        }
+
+        // Troca o menor elemento encontrado com o elemento na posição i
+        trocar(&array[minIdx], &array[i]);
+    }
+}
+
+// Função para imprimir o array
+void imprimirArray(int array[], int tamanho) {
+    int i;
+    for (i = 0; i < tamanho; i++) {
+        printf("%d ", array[i]);
+    }
+    printf("\n");
+}
+
+int main() {
+    int array[] = {64, 25, 12, 22, 11};
+    int tamanho = sizeof(array) / sizeof(array[0]);
+
+    printf("Array original:\n");
+    imprimirArray(array, tamanho);
+
+    selectionSort(array, tamanho);
+
+    printf("Array ordenado:\n");
+    imprimirArray(array, tamanho);
+
+    return 0;
+}
+```
+
+### Explicação do Código
+
+1. **Função `trocar`**:
+   - Troca os valores de dois elementos, usando um terceiro valor temporário para auxiliar na troca.
+
+2. **Função `selectionSort`**:
+   - Usa dois loops: o primeiro (`for (i = 0; i < tamanho - 1; i++)`) percorre o array e o segundo (`for (j = i + 1; j < tamanho; j++)`) encontra o menor elemento no restante do array.
+   - Após encontrar o menor elemento, ele troca esse elemento com o elemento na posição `i`.
+
+3. **Função `imprimirArray`**:
+   - Imprime os elementos do array.
+
+4. **Função `main`**:
+   - Define um array de exemplo, imprime o array original, chama a função `selectionSort` para ordená-lo e imprime o array ordenado.
+
+O Selection Sort é um algoritmo fácil de entender, mas tem uma complexidade de tempo O(n²), o que significa que ele pode não ser eficiente para arrays grandes.
